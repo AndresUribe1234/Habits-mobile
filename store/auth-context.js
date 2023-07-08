@@ -2,8 +2,8 @@ import { createContext, useState, useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const AuthContext = createContext({
-  credential: {},
-  credentialFxn: function () {},
+  credentials: {},
+  credentialsFxn: function () {},
 });
 
 export function AuthContextProvider(props) {
@@ -34,8 +34,8 @@ export function AuthContextProvider(props) {
   }
 
   const context = {
-    credential: credentials,
-    credentialFxn: credentialsHandler,
+    credentials: credentials,
+    credentialsFxn: credentialsHandler,
   };
 
   return (
